@@ -5,7 +5,7 @@ import DzakwanLogo from "./logo";
 import NavLink from "./nav-links";
 import { Menu } from 'iconoir-react';
 
-export default function Navbar(){
+export default function Navbar() {
     const [menuActive, setMenuActive] = useState(false);
 
     const toggleMenu = () => {
@@ -13,9 +13,11 @@ export default function Navbar(){
     };
 
     useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (menuActive && !event.target.closest('.hamburger') && !event.target.closest('#myLinks')) {
-            setMenuActive(false);
+        const handleClickOutside = (event: MouseEvent) => {
+            const target = event.target as Element; // Correct typecasting
+
+            if (menuActive && !target.closest('.hamburger') && !target.closest('#myLinks')) {
+                setMenuActive(false);
             }
         };
 
@@ -25,7 +27,7 @@ export default function Navbar(){
         };
     }, [menuActive]);
 
-    return(
+    return (
         <header>
             <DzakwanLogo />
             <NavLink />

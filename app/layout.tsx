@@ -10,11 +10,11 @@ export const metadata: Metadata = {
   description: "Dzakwan Irfan Ramdhani's Portfolio Website",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode; }) {
+export default function RootLayout({ children, i }: { children: React.ReactNode; i: string; }) {
   return (
     <html lang="en">
       <body>
-        <Navbar />
+        <Navbar i={i} />
         {children}
         <Footer />
       </body>

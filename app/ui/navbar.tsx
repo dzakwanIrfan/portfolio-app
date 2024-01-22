@@ -13,7 +13,7 @@ export default function Navbar({i}: {i: string;}){
     };
 
     useEffect(() => {
-        const handleClickOutside = (event: MouseEvent<HTMLElement>) => {
+        const handleClickOutside = (event) => {
           if (menuActive && !event.target.closest('.hamburger') && !event.target.closest('#myLinks')) {
             setMenuActive(false);
           }

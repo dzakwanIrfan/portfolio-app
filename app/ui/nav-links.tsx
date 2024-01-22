@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function NavLink({i, active} : {i: string; active: boolean}) {
+export default function NavLink() {
     const links = [
         { name: 'HOME', href: '/'},
         { name: 'CONTACT', href: '/#contact'},
@@ -9,10 +9,8 @@ export default function NavLink({i, active} : {i: string; active: boolean}) {
         { name: 'ARTICLES', href: '/'},
     ];
 
-    const navClass = active ? "nav-links active" : "nav-links";
-
     return (
-        <nav id={i} className={navClass}>
+        <nav>
             {links.map((link) => {
                 return(
                     <Link

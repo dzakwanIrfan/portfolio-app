@@ -5,7 +5,7 @@ import DzakwanLogo from "./logo";
 import NavLink from "./nav-links";
 import { Menu } from 'iconoir-react';
 
-export default function Navbar({i = ''}: {i: string;}) {
+export default function Navbar(){
     const [menuActive, setMenuActive] = useState(false);
 
     const toggleMenu = () => {
@@ -28,9 +28,15 @@ export default function Navbar({i = ''}: {i: string;}) {
     return(
         <header>
             <DzakwanLogo />
-            <NavLink i={''} active={false} />
-            <NavLink i='myLinks' active={menuActive} />
-            <div className="hamburger" onClick={toggleMenu} style={{ zIndex: '999' }}>
+            <NavLink />
+            <div id="myLinks" className={menuActive ? 'active' : ''}>
+                <a href="/#home">HOME</a>
+                <a href="/#contact">CONTACT</a>
+                <a href="/#project">PROJECTS</a>
+                <a href="/extras">EXTRAS</a>
+                <a href="/">ARTICLES</a>
+            </div>
+            <div className="hamburger" onClick={toggleMenu}>
                 <Menu width={24} height={24} />
             </div>
         </header>

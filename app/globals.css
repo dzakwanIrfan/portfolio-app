@@ -44,15 +44,16 @@ header .hamburger{
   font-size: 1.5rem;
   cursor: pointer;
   transition: all 0.3s;
+  z-index: 999;
 }
 
 #myLinks {
   position: fixed;
-  right: -100%; /* Start off-screen */
+  right: -100%; 
   top: 0;
   width: 10rem;
   height: 100%;
-  background-color: var(--hitamBG); /* Example background color */
+  background-color: var(--hitamBG);
   overflow-x: hidden;
   transition: 0.5s;
   display: flex;
@@ -71,7 +72,7 @@ header .hamburger{
 }
 
 #myLinks.active {
-  right: 0; /* Slide in */
+  right: 0;
 }
 
 #myLinks a:hover{

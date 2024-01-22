@@ -1,3 +1,6 @@
+import { Mail, Instagram, FacebookTag, Linkedin, Globe, Download, Message } from "iconoir-react";
+import Link from "next/link";
+
 export default function Home() {
   return (
     <>
@@ -8,19 +11,39 @@ export default function Home() {
             <div className="home-p">at Jenderal Soedirman University. I have a deep interest in web development, mobile app development, and design. Committed to honing my skills in these fields, I am passionate about creating products that are both visually appealing and functional. Let&apos;s work together and bring your vision to life!
             </div>
             <div className="home-contact">
-                <a href="mailto:dzakoneo7@gmail.com?subject=Hello%20there&body=I%20hope%20this%20email%20finds%20you%20well." className="email">
-                    <i className="iconoir-mail"></i>
+                <Link
+                    href="mailto:dzakoneo7@gmail.com?subject=Hello%20there&body=I%20hope%20this%20email%20finds%20you%20well."
+                    className="email"
+                >
+                    <Mail 
+                        className="i"
+                    />
                     <span>Email Me</span>
-                </a>
-                <a href="https://www.instagram.com/dzakonee/" className="contact-i" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                    <i className="iconoir-instagram"></i>
-                </a>
-                <a href="https://www.facebook.com/dzakwan.irfan/" className="contact-i" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                    <i className="iconoir-facebook-tag"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/dzakwan-irfan-2015861a1/" className="contact-i" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <i className="iconoir-linkedin"></i>
-                </a>
+                </Link>
+                <Link
+                    href="https://www.instagram.com/dzakonee/"
+                    target="_blank"
+                >
+                    <Instagram 
+                        className="contact-i"
+                    />
+                </Link>
+                <Link
+                    href="https://www.facebook.com/dzakwan.irfan/"
+                    target="_blank"
+                >
+                    <FacebookTag 
+                        className="contact-i"
+                    />
+                </Link>
+                <Link
+                    href="https://www.linkedin.com/in/dzakwan-irfan-2015861a1/"
+                    target="_blank"
+                >
+                    <Linkedin 
+                        className="contact-i"
+                    />
+                </Link>
             </div>
             
         </div>
@@ -49,11 +72,15 @@ export default function Home() {
                 </a>
                 <div className="project-link">
                     <a href=""><div className="project-icon left">
-                        <i className="iconoir-globe"></i>
+                        <Globe 
+                            className="i"
+                        />
                         <span>Go to Website</span>
                     </div></a>
                     <a href=""><div className="project-icon right">
-                        <i className="iconoir-download"></i>
+                        <Download
+                            className="i"
+                        />
                         <span>Download Project</span>
                     </div></a>
                 </div>
@@ -64,11 +91,15 @@ export default function Home() {
                 <img src="/project2.jpg" alt=""></img>
                 <div className="project-link">
                     <a href=""><div className="project-icon left">
-                        <i className="iconoir-globe"></i>
+                        <Globe 
+                            className="i"
+                        />
                         <span>Go to Website</span>
                     </div></a>
                     <a href=""><div className="project-icon right">
-                        <i className="iconoir-download"></i>
+                        <Download   
+                            className="i"
+                        />
                         <span>Download Project</span>
                     </div></a>
                 </div>
@@ -88,9 +119,7 @@ export default function Home() {
                 <div className="about-head">
                     Comunicative
                 </div>
-                <div className="about-logo">
-                    <i className="iconoir-message"></i>
-                </div>
+                <Message className="about-logo"/>
             </div>
 
             <div className="about-card">
@@ -100,9 +129,7 @@ export default function Home() {
                 <div className="about-head">
                     Comunicative
                 </div>
-                <div className="about-logo">
-                    <i className="iconoir-message"></i>
-                </div>
+                <Message className="about-logo"/>
             </div>
 
             <div className="about-card">
@@ -112,9 +139,7 @@ export default function Home() {
                 <div className="about-head">
                     Comunicative
                 </div>
-                <div className="about-logo">
-                    <i className="iconoir-message"></i>
-                </div>
+                <Message className="about-logo"/>
             </div>
 
             <div className="about-card">
@@ -124,9 +149,7 @@ export default function Home() {
                 <div className="about-head">
                     Comunicative
                 </div>
-                <div className="about-logo">
-                    <i className="iconoir-message"></i>
-                </div>
+                <Message className="about-logo"/>
             </div>
         </div>
     </section>
@@ -146,22 +169,40 @@ export default function Home() {
             <div className="socmed">
                 <p className="socmed-p">Or just check my profile:</p>
                 <div className="socmed-logo">
-                    <a href="https://www.instagram.com/dzakonee/" className="contact-i" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                        <i className="iconoir-instagram"></i>
-                    </a>
-                    <a href="https://www.facebook.com/dzakwan.irfan/" className="contact-i" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                        <i className="iconoir-facebook-tag"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/dzakwan-irfan-2015861a1/" className="contact-i" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <i className="iconoir-linkedin"></i>
-                    </a>
+                <Link
+                    href="https://www.instagram.com/dzakonee/"
+                    target="_blank"
+                >
+                    <Instagram 
+                        className="contact-i"
+                    />
+                </Link>
+                <Link
+                    href="https://www.facebook.com/dzakwan.irfan/"
+                    target="_blank"
+                >
+                    <FacebookTag 
+                        className="contact-i"
+                    />
+                </Link>
+                <Link
+                    href="https://www.linkedin.com/in/dzakwan-irfan-2015861a1/"
+                    target="_blank"
+                >
+                    <Linkedin 
+                        className="contact-i"
+                    />
+                </Link>
                 </div>
             </div>
             <div className="extra">
                 <p className="extra-p">See my other projects:</p>
-                <a href="extras/index.html" className="extra-container">
+                <Link
+                    href="/extras"
+                    className="extra-container"
+                >
                     <span>EXTRAS</span>
-                </a>
+                </Link>
             </div>
         </div>
     </section>

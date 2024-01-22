@@ -193,14 +193,14 @@ width: 100%; /* Mengatur lebar garis bawah menjadi 100% saat dihover */
   cursor: pointer;
 }
 
-#home .home-left .home-contact .email i{
-  font-size: 32px;
+#home .home-left .home-contact .email .i{
+  font-size: 20px;
   margin-right: 0.5rem;
 }
 
 .contact-i{
   /* margin-right: 60px; */
-  font-size: 40px;
+  font-size: 32px;
   cursor: pointer;
   color: var(--putih);
 }
@@ -351,7 +351,7 @@ width: 100%; /* Mengatur lebar garis bawah menjadi 100% saat dihover */
   color: var(--putih);
 }
 
-#project .project-container .project .project-link .project-icon i{
+#project .project-container .project .project-link .project-icon .i{
   padding-right: 12px;
 }
 
@@ -395,7 +395,7 @@ width: 100%; /* Mengatur lebar garis bawah menjadi 100% saat dihover */
   padding: 6px 12px;
   background-color: var(--biruGelap);
   top: -30px;
-  left: -27px;
+  left: -15px;
   border-radius: 12px;
 }
 
@@ -431,7 +431,7 @@ width: 100%; /* Mengatur lebar garis bawah menjadi 100% saat dihover */
   cursor: pointer;
 }
 
-#contact .contact-container .email .contact-link i{
+#contact .contact-container .email .contact-link .i{
   font-size: 32px;
   padding-right: 12px;
 }
@@ -563,6 +563,11 @@ footer .footer-container .footer-logo{
 }
 
 @media screen and (max-width: 960px) {
+  .contact-i{
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--putih);
+  }
   #home{
       padding: 0 4rem;
       padding-top: 180px;
@@ -582,7 +587,7 @@ footer .footer-container .footer-logo{
       display: none;
   }
 
-  #home .home-left .home-contact .email i{
+  #home .home-left .home-contact .email .i{
       margin: 0;
   }
 
@@ -682,7 +687,7 @@ footer .footer-container .footer-logo{
       color: var(--putih);
   }
   
-  #project .project-container .project .project-link .project-icon i{
+  #project .project-container .project .project-link .project-icon .i{
       display: none;
   }
 
@@ -751,12 +756,12 @@ footer .footer-container .footer-logo{
   }
 
   #about .about-container .about-card .about-logo{
-      font-size: 24px;
+      font-size: 32px;
       position: absolute;
       padding: 6px 12px;
       background-color: var(--biruGelap);
       top: -24px;
-      left: -21px;
+      left: -24px;
       border-radius: 12px;
   }
 

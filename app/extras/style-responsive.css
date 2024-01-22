@@ -1,0 +1,90 @@
+@media screen and (max-width: 1366px) {
+    #extras{
+        padding: 0 8rem;
+    }
+
+    footer .footer-container{
+        padding: 0 8rem;
+        color: var(--putih);
+        margin: auto;
+        padding-top: 36px;
+        padding-bottom: 36px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #extras{
+        padding: 0 4rem;
+    }
+
+    footer .footer-container{
+        padding: 0 4rem;
+        color: var(--putih);
+        margin: auto;
+        padding-top: 36px;
+        padding-bottom: 36px;
+    }
+
+    header nav{
+        display: none;
+    }
+
+    header .hamburger{
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    footer .footer-container .footer-head{
+        font-size: 42px;
+    }
+
+    footer .footer-container .footer-p{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 580px){
+    #extras{
+        margin-top: 100px;
+        padding: 0 2rem;
+    }
+
+    footer .footer-container{
+        padding: 0 2rem;
+        color: var(--putih);
+        margin: auto;
+        padding-top: 36px;
+        padding-bottom: 36px;
+    }
+
+    .bg-head{
+        height: 45px;
+        width: 100%;
+        background: linear-gradient( rgba(0, 0, 205, 1), rgba(34, 34, 34, 0));
+        position: relative;
+    }
+    
+    .bg-head .head{
+        position: absolute;
+        font-size: 28px;
+        top: -24px;
+        margin-left: 34px;
+        color: var(--putih);
+    }
+
+    header .logo img{
+        width: 30px;
+    }
+    
+    header .logo .logo-name{
+        font-size: 12px;
+    }
+
+    header .hamburger{
+        font-size: 1rem;
+    }
+}
+
+
+

@@ -5,7 +5,7 @@ export default function NavLink({i, active} : {i: string; active: boolean}) {
         { name: 'HOME', href: '/'},
         { name: 'CONTACT', href: '/#contact'},
         { name: 'PROJECTS', href: '/#project'},
-        { name: 'EXTRAS', href: '/'},
+        { name: 'EXTRAS', href: 'extras'},
         { name: 'ARTICLES', href: '/'},
     ];
 

@@ -1,0 +1,236 @@
+:root{
+    --biruGelap: #000370;
+    --biru: #0000cd;
+    --hitamBG: #3f3f3f;
+    --hitam: #222222;
+    --putih: #f3f3f3;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: poppins;
+}
+
+a{
+    display: inline-flex;
+}
+
+body{
+    background-color: var(--hitam);
+}
+
+header{
+    background-color: var(--hitam);
+    border-bottom: var(--biruGelap) solid 3px;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    right: 0;
+    top: 0;
+    z-index: 99999;
+}
+
+header .hamburger{
+    display: none;
+    color: var(--putih);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#myLinks {
+    position: fixed;
+    right: -100%; /* Start off-screen */
+    top: 0;
+    width: 10rem;
+    height: 100%;
+    background-color: var(--hitamBG); /* Example background color */
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 7rem;
+}
+
+#myLinks a{
+    text-decoration: none;
+    color: var(--putih);
+    font-size: 20px;
+    font-weight: 400;
+    padding: 0 3rem;
+}
+
+#myLinks.active {
+    right: 0; /* Slide in */
+}
+
+#myLinks a:hover{
+    color: rgba(243, 243, 243, 0.75);
+}
+
+header .hamburger:hover{
+    color: var(--biruGelap);
+}
+
+header .logo{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+header .logo:hover{
+    opacity: 0.75;
+}
+
+header .logo img{
+    width: 50px;
+    margin-right: 12px;
+    height: auto;
+}
+
+header .logo .logo-name{
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--putih);
+}
+
+header nav{
+    margin-left: auto;
+}
+
+nav a{
+    margin-left: 40px; 
+    text-decoration: none;
+    color: var(--putih);
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 2px;
+    position: relative;
+}
+
+nav a:hover{
+    color: rgba(243, 243, 243, 0.75);
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-image: linear-gradient(to right, rgba(243, 243, 243, 1), rgb(0, 0, 205));
+  transition: width 0.3s ease-out; /* Animasi lebar garis bawah */
+}
+
+nav a:hover::after {
+  width: 100%; /* Mengatur lebar garis bawah menjadi 100% saat dihover */
+}
+
+#extras{
+    padding: 0 16rem;
+    margin: auto;
+    margin-top: 130px;
+}
+
+.extra{
+    display: flex;
+    width: 100%;
+    color: var(--putih);
+    align-items: center;
+    border: 1px solid var(--putih);
+    margin-top: 1rem;
+    transition: all 0.3s;
+}
+
+.extra:hover{
+    background-color: var(--biruGelap);
+}
+
+.extra-1{
+    width: 20%;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.extra-2{
+    width: 80%;
+    font-size: 2rem;
+}
+
+
+.bg-head{
+    height: 80px;
+    width: 100%;
+    background: linear-gradient( rgb(0, 0, 205), rgba(34, 34, 34, 0));
+    position: relative;
+}
+
+.bg-head .head{
+    position: absolute;
+    font-size: 48px;
+    top: -36px;
+    margin-left: 36px;
+    color: var(--putih);
+}
+
+footer{
+    margin-top: 160px;
+    border-top: var(--biruGelap) solid 3px;
+    box-sizing: border-box;
+}
+
+footer .footer-container{
+    padding: 0 16rem;
+    color: var(--putih);
+    margin: auto;
+    padding-top: 36px;
+    padding-bottom: 36px;
+}
+
+footer .footer-container .footer-head{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+    text-shadow: 0 0 4px rgba(0, 0, 205, 0.5), 
+               0 0 8px rgba(0, 0, 205, 0.5), 
+               0 0 12px rgba(0, 0, 205, 0.5);
+}
+
+footer .footer-container .footer-p{
+    font-size: 16px;
+    color: rgba(243, 243, 243, 0.75);
+}
+
+footer .footer-container .footer-p a{
+    opacity: 1;
+    text-decoration: underline;
+    color: rgba(243, 243, 243, 1);
+}
+
+footer .footer-container .footer-logo{
+    display: flex;
+    gap: 3rem;
+    padding-top: 18px;
+}
+
+.contact-i{
+    /* margin-right: 60px; */
+    font-size: 40px;
+    cursor: pointer;
+    color: var(--putih);
+}
+
+ .contact-i:hover{
+    color: var(--biruGelap);
+}

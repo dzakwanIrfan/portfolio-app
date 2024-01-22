@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+:root{
+  --biruGelap: #000370;
+  --biru: #0000cd;
+  --hitamBG: #3f3f3f;
+  --hitam: #222222;
+  --putih: #f3f3f3;
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: var(--hitam);
+  font-family: poppins;
+}
+
+header{
+  background-color: var(--hitam);
+  border-bottom: var(--biruGelap) solid 3px;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  right: 0;
+  top: 0;
+  z-index: 99999;
+}
+
+header .hamburger{
+  display: none;
+  color: var(--putih);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#myLinks {
+  position: fixed;
+  right: -100%; /* Start off-screen */
+  top: 0;
+  width: 10rem;
+  height: 100%;
+  background-color: var(--hitamBG); /* Example background color */
+  overflow-x: hidden;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 7rem;
+}
+
+#myLinks a{
+  text-decoration: none;
+  color: var(--putih);
+  font-size: 20px;
+  font-weight: 400;
+  padding: 0 3rem;
+}
+
+#myLinks.active {
+  right: 0; /* Slide in */
+}
+
+#myLinks a:hover{
+  color: rgba(243, 243, 243, 0.75);
+}
+
+header .hamburger:hover{
+  color: var(--biruGelap);
+}
+
+header .logo{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+header .logo:hover{
+  opacity: 0.75;
+}
+
+header .logo img{
+  width: 50px;
+  margin-right: 12px;
+  height: auto;
+}
+
+header .logo .logo-name{
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--putih);
+}
+
+header nav{
+  margin-left: auto;
+}
+
+nav a{
+  margin-left: 40px; 
+  text-decoration: none;
+  color: var(--putih);
+  font-size: 20px;
+  font-weight: 400;
+  padding-bottom: 2px;
+  position: relative;
+}
+
+nav a:hover{
+  color: rgba(243, 243, 243, 0.75);
+}
+
+nav a::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+width: 0;
+height: 2px;
+background-image: linear-gradient(to right, rgba(243, 243, 243, 1), rgb(0, 0, 205));
+transition: width 0.3s ease-out; /* Animasi lebar garis bawah */
+}
+
+nav a:hover::after {
+width: 100%; /* Mengatur lebar garis bawah menjadi 100% saat dihover */
+}
+
+.square{
+  width: 35px;
+  height: 35px;
+  border: 3px solid var(--biruGelap);
+  background-color: var(--hitamBG);
+  font-size: 5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--biruGelap);
+}
+
+.board{
+  display: flex;
+  flex-wrap: wrap;
+  width: 105px;
+  height: 105px;
+}
+
+.game{
+  display: flex;
+}
+
+.title{
+  text-align: center;
+  margin-top: 7rem;
+}
+
+.title .sub-title{
+  font-size: 5rem;
+  background: linear-gradient(#f3f3f3, #0000cd);
+			-webkit-text-fill-color: transparent;
+			-webkit-background-clip: text;
+      font-family: 'Righteous', sans-serif;
+}
+
+.title p{
+  font-size: 1rem;
+  color: var(--putih);
+}
+
+.game{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+}
+
+.game-info{
+  color: var(--putih);
+  position: absolute;
+  right: 10%;
+  top: 0;
+}
+
+.board{
+  width: 450px;
+  height: 450px;
+}
+
+.status{
+  font-size: 1rem;
+  font-weight: 600;
+  position: absolute;
+  left: 10%;
+  padding: 0.5rem 1rem;
+}
+
+.square{
+  width: 150px;
+  height: 150px;
+}
+
+.board-container{
+  display: flex;
+}

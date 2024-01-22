@@ -1,0 +1,77 @@
+@media screen and (max-width: 1366px) {
+    
+}
+
+@media screen and (max-width: 1024px) {
+    header nav{
+        display: none;
+    }
+
+    header .hamburger{
+        display: inline-block;
+    }
+
+    .board-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .status{
+        font-size: 1rem;
+        font-weight: 600;
+        position: unset;
+        padding: 0.5rem 1rem;
+    }
+
+    .game{
+        margin: 1rem 0;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .title .sub-title{
+        font-size: 4rem;
+    }
+
+    .game-info{
+        color: var(--putih);
+        position: unset;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 580px){
+    header .logo img{
+        width: 30px;
+    }
+    
+    header .logo .logo-name{
+        font-size: 12px;
+    }
+
+    header .hamburger{
+        font-size: 1rem;
+    }
+
+    .title .sub-title{
+        font-size: 3rem;
+    }
+
+    .board{
+        transform: scale(0.8);
+    }
+
+    .board-container{
+        gap: 0rem;
+    }
+
+    .game-info{
+        margin-top: 0rem;
+    }
+}
+
+
+

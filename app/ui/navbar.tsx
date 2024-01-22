@@ -14,16 +14,16 @@ export default function Navbar({i}: {i: string;}){
 
     useEffect(() => {
         const handleClickOutside = (event) => {
-          if (menuActive && !event.target.closest('.hamburger') && !event.target.closest('#myLinks')) {
+            if (menuActive && !event.target.closest('.hamburger') && !event.target.closest('#myLinks')) {
             setMenuActive(false);
-          }
+            }
         };
-    
+
         document.addEventListener('click', handleClickOutside);
         return () => {
-          document.removeEventListener('click', handleClickOutside);
+            document.removeEventListener('click', handleClickOutside);
         };
-      }, [menuActive]);
+    }, [menuActive]);
 
     return(
         <header>

@@ -5,7 +5,7 @@ import DzakwanLogo from "./logo";
 import NavLink from "./nav-links";
 import { Menu } from 'iconoir-react';
 
-export default function Navbar({i}: {i: string;}){
+export default function Navbar({i = ''}: {i: string;}) {
     const [menuActive, setMenuActive] = useState(false);
 
     const toggleMenu = () => {

@@ -1,8 +1,7 @@
 'use client'
 
-import { useState } from 'react';
+import { SetStateAction, useState } from 'react';
 import Board from "@/app/lib/tic-tac-toe/component/Board";
-import { useEffect } from 'react';
 import "./style.css";
 import "./style-responsive.css";
 
@@ -12,11 +11,11 @@ export default function Game(){
   const xIsNext = currentMove % 2 === 0;
   const currentSquares = history[currentMove];
 
-  function jumpTo(nextMove){
+  function jumpTo(nextMove: SetStateAction<number>){
     setCurrentMove(nextMove);
   }
 
-  function handlePlay(nextSquares){
+  function handlePlay(nextSquares: any){
     const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
     setHistory(nextHistory);
     setCurrentMove(nextHistory.length - 1);

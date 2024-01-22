@@ -1,7 +1,6 @@
 import React from 'react';
 import type { Metadata } from "next";
 import "./globals.css";
-import "./globals-responsive.css";
 import Footer from "@/app/ui/footer";
 import Navbar from "@/app/ui/navbar";
 

@@ -3,9 +3,9 @@ export default function Home() {
     <>
       <section id="home">
         <div className="home-left">
-            <div className="head1">Hello, i'm Dzakwan.</div>
+            <div className="head1">Hello, i&apos;m Dzakwan.</div>
             <div className="head2">Informatics Student</div>
-            <div className="home-p">at Jenderal Soedirman University. I have a deep interest in web development, mobile app development, and design. Committed to honing my skills in these fields, I am passionate about creating products that are both visually appealing and functional. Let's work together and bring your vision to life!
+            <div className="home-p">at Jenderal Soedirman University. I have a deep interest in web development, mobile app development, and design. Committed to honing my skills in these fields, I am passionate about creating products that are both visually appealing and functional. Let&apos;s work together and bring your vision to life!
             </div>
             <div className="home-contact">
                 <a href="mailto:dzakoneo7@gmail.com?subject=Hello%20there&body=I%20hope%20this%20email%20finds%20you%20well." className="email">
@@ -133,7 +133,7 @@ export default function Home() {
 
     <section id="contact">
         <div className="bg-head">
-            <div className="head">let's <b><i>WORK</i></b> together!</div>
+            <div className="head">let&apos;s <b><i>WORK</i></b> together!</div>
         </div>
         <div className="contact-container">
             <div className="email">

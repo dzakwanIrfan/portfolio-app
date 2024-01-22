@@ -1,3 +1,4 @@
+import React from 'react';
 import type { Metadata } from "next";
 import "./globals.css";
 import "./globals-responsive.css";
@@ -9,16 +10,11 @@ export const metadata: Metadata = {
   description: "Dzakwan Irfan Ramdhani's Portfolio Website",
 };
 
-export default function RootLayout({
-  children, i
-}: Readonly<{
-  children: React.ReactNode;
-  i: string;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode; }) {
   return (
     <html lang="en">
       <body>
-        <Navbar i={i}/>
+        <Navbar />
         {children}
         <Footer />
       </body>

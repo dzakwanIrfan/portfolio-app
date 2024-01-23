@@ -705,7 +705,7 @@ footer .footer-container .footer-logo{
   }
 
   #about .about-p{
-      font-size: 14px;
+      font-size: 12px;
   }
 }
 
@@ -735,10 +735,6 @@ footer .footer-container .footer-logo{
       top: -24px;
       margin-left: 34px;
       color: var(--putih);
-  }
-
-  #about .about-p{
-      font-size: 12px;
   }
 
   #about .about-container .about-card .about-head{

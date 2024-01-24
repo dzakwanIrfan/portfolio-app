@@ -1,3 +1,5 @@
+import { Mail, Instagram, FacebookTag, Linkedin } from "iconoir-react";
+
 export default function Footer() {
     return(
         <footer>
@@ -10,13 +12,13 @@ export default function Footer() {
                 </div>
                 <div className="footer-logo">
                     <a href="https://www.instagram.com/dzakonee/" className="contact-i" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                        <i className="iconoir-instagram"></i>
+                        <Instagram className="i" />
                     </a>
                     <a href="https://www.facebook.com/dzakwan.irfan/" className="contact-i" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                        <i className="iconoir-facebook-tag"></i>
+                        <FacebookTag className="i" />
                     </a>
                     <a href="https://www.linkedin.com/in/dzakwan-irfan-2015861a1/" className="contact-i" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <i className="iconoir-linkedin"></i>
+                        <Linkedin className="i" />
                     </a>                  
                 </div>
             </div>

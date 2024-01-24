@@ -1,0 +1,77 @@
+:root{
+    --biruGelap: #000370;
+    --biru: #0000cd;
+    --hitamBG: #3f3f3f;
+    --hitam: #222222;
+    --putih: #f3f3f3;
+  }
+  
+  *{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+  }
+
+  main{
+    margin: auto;
+    margin-top: 15%;
+    background-color: var(--putih);
+    width: 15%;
+    text-align: center;
+    padding: 1rem 0;
+    border-radius: 1rem;
+  }
+
+  main a{
+    margin-top: 4px;
+    padding: 4px 8px;
+    border-radius: 8px;
+    color: var(--putih);
+    background-color: var(--biru);
+    transition: all 0.3;
+  }
+
+  main a:hover{
+    background-color: var(--biruGelap);
+  }
+
+  main h2{
+    color: var(--hitam);
+  }
+
+@media screen and (max-width: 1366px) {
+    main{
+        width: 20%;
+        margin-top: 20%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    main{
+        width: 25%;
+        margin-top: 25%;
+    }
+
+}
+
+@media screen and (max-width: 960px) {
+    main{
+        width: 35%;
+        margin-top: 35%;
+    }
+
+}
+
+@media screen and (max-width: 580px){
+    main{
+        width: 45%;
+        margin-top: 45%;
+    }
+    
+}
+
+
+

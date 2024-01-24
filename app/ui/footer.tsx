@@ -1,4 +1,4 @@
-import { Mail, Instagram, FacebookTag, Linkedin } from "iconoir-react";
+import { Instagram, FacebookTag, Linkedin } from "iconoir-react";
 
 export default function Footer() {
     return(

@@ -1,6 +1,7 @@
+import Link from "next/link";
+import { GridXmark } from "iconoir-react";
 import "./style.css";
 import "./style-responsive.css";
-import Link from "next/link";
 
 export default function Estras() {
     return(
@@ -13,7 +14,13 @@ export default function Estras() {
                     href='/extras/tic-tac-toe'
                     className='extra'
                 >
-                    <div className="extra-1"><i className="iconoir-grid-xmark"></i></div>
+                    <div className="extra-1">
+                        <GridXmark 
+                            width={48}
+                            height={48}
+                            className="i"
+                        />
+                    </div>
                     <div className="extra-2">Tic-Tac-Toe</div>
                 </Link>
             </div>

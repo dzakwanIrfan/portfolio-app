@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { GridXmark } from "iconoir-react";
+import { GridXmark, Clock } from "iconoir-react";
 import "./style.css";
 import "./style-responsive.css";
 
@@ -22,6 +22,19 @@ export default function Estras() {
                         />
                     </div>
                     <div className="extra-2">Tic-Tac-Toe</div>
+                </Link>
+                <Link
+                    href='/extras/stopwatch'
+                    className='extra'
+                >
+                    <div className="extra-1">
+                        <Clock 
+                            width={48}
+                            height={48}
+                            className="i"
+                        />
+                    </div>
+                    <div className="extra-2">Stopwatch</div>
                 </Link>
             </div>
         </section>

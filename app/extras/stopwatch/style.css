@@ -1,0 +1,76 @@
+:root{
+    --biruGelap: #000370;
+    --biru: #0000cd;
+    --hitamBG: #3f3f3f;
+    --hitam: #222222;
+    --putih: #f3f3f3;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+
+a{
+    display: inline-flex;
+}
+
+.container{
+    margin: 7rem auto;
+    padding: 3rem 1rem;
+    background-color: var(--hitamBG);
+    width: 50%;
+    border-radius: 1rem;
+}
+
+#time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 3rem;
+    color: var(--putih);
+}
+
+.time{
+    border: 4px solid var(--biruGelap);
+    padding: 0 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--hitam);
+}
+
+.wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+p{
+    font-size: 12px;
+}
+
+#buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.button{
+    background-color: var(--biruGelap);
+    border-radius: 0.5rem;
+    padding: 8px 16px;
+    color: var(--putih);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: var(--biru);
+}

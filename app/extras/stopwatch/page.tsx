@@ -2,51 +2,56 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import './style.css';
+import Buttons from '@/app/ui/stopwatch/buttons';
+import Display from '@/app/ui/stopwatch/display';
 
 export default function Stopwatch() {
-  const [startTime, setStartTime] = useState<number | null>(null);
-  const [now, setNow] = useState<number | null>(null);
-  const intervalRef = useRef<number | null>(null);
+  const [time, setTime] = useState({ms:0, s:0, m:0, h:0});
+  const [interv, setInterv] = useState();
+  const [status, setStatus] = useState(0);
 
-  function handleStart() {
-    setStartTime(Date.now());
-    setNow(Date.now());
+  const start = () => {
+    run();
+    setStatus(1);
+    setInterv(setInterval(run, 10));
+  };
 
-    clearInterval(intervalRef.current);
-    intervalRef.current = setInterval(() => {
-      setNow(Date.now());
-    }, 10);
+  let updateMs = time.ms, updateS = time.s, updateM = time.m, updateH = time.h;
+
+  const run = () => {
+    if(updateM === 60){
+      updateH++;
+      updateM = 0;
+    }
+    if(updateS === 60){
+      updateM++;
+      updateS = 0;
+    }
+    if(updateMs === 100){
+      updateS++;
+      updateMs = 0;
+    }
+    updateMs++;
+    return setTime({ms:updateMs, s:updateS, m:updateM, h:updateH});
   }
-  
-  let secondsPassed = 0;
-  if (startTime != null && now != null) {
-    secondsPassed = (now - startTime) / 1000;
-  }
+
+  const stop = () => {
+    clearInterval(interv);
+    setStatus(2);
+  };
+
+  const reset = () => {
+    clearInterval(interv);
+    setStatus(0);
+    setTime({ms:0, s:0, m:0, h:0});
+  };
+
+  const resume = () => start();
 
   return (
     <div className="container">
-      <div id="milisecond">{secondsPassed.toFixed(3)}</div>
-      <div id="time">
-        <span className="wrap">
-          <div className="time" id="hour">00</div>
-          <p>H</p>
-        </span>
-        <span className="wrap">
-          <div className="time" id="minute">00</div>
-          <p>M</p>
-        </span>
-        <span className="wrap">
-          <div className="time" id="second">00</div>
-          <p>S</p>
-        </span>
-      </div>
-      <div id="buttons">
-        <button className="button" onClick={handleStart}>
-            Start
-        </button>
-        <button className="button">Split</button>
-        <button className="button">Reset</button>
-      </div>
+      <Display time={time} />
+      <Buttons status={status} start={start} stop={stop} reset={reset} resume={resume}/>
     </div>
   );
 }

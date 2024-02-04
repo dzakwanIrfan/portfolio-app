@@ -1,19 +1,19 @@
 'use client'
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import './style.css';
 import Buttons from '@/app/ui/stopwatch/buttons';
 import Display from '@/app/ui/stopwatch/display';
 
 export default function Stopwatch() {
   const [time, setTime] = useState({ms:0, s:0, m:0, h:0});
-  const [interv, setInterv] = useState();
+  const [interv, setInterv] = useState<NodeJS.Timeout | undefined>();
   const [status, setStatus] = useState(0);
 
   const start = () => {
     run();
     setStatus(1);
-    setInterv(setInterval(run, 10));
+    setInterv(setInterval(run, 1));
   };
 
   let updateMs = time.ms, updateS = time.s, updateM = time.m, updateH = time.h;

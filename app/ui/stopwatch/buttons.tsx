@@ -1,6 +1,14 @@
 import React from "react";
 
-export default function Buttons(props) {
+interface ButtonsProps {
+    status: number;
+    start: () => void;
+    stop: () => void;
+    reset: () => void;
+    resume: () => void;
+  }
+
+export default function Buttons(props: ButtonsProps) {
     return (
         <div id="buttons">
             {(props.status === 0)?

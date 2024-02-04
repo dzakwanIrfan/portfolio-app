@@ -1,4 +1,13 @@
-export default function Display({time}) {
+interface DisplayProps {
+    time: {
+      ms: number;
+      s: number;
+      m: number;
+      h: number;
+    };
+}
+
+export default function Display({time}: DisplayProps) {
     return (
         <>
             <div id="milisecond">{time.ms}</div>
